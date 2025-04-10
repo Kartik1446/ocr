@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image OCR with Wave Effect</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+</head>
+<body>
+    <div class="cursor-trail"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Image OCR</h1>
+            <p>Upload an image to extract text</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-box">
+                <input type="file" id="imageInput" accept="image/*" class="file-input">
+                <label for="imageInput" class="upload-label">
+                    <span class="upload-icon">📁</span>
+                    <span>Choose an image</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="image-display">
+                <div id="imageContainer" class="image-container">
+                    <p class="placeholder-text">Your image will appear here</p>
+                </div>
+            </div>
+
+            <div class="text-display">
+                <div class="text-header">
+                    <h2>Extracted Text</h2>
+                    <div class="loading-indicator" id="loadingIndicator">
+                        <span>Processing...</span>
+                    </div>
+                </div>
+                <div id="textContainer" class="text-container">
+                    <p class="placeholder-text">Extracted text will appear here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
